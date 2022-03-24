@@ -205,13 +205,13 @@ Time to get inside this house!
 &lt;div id=&quot;textdesign&quot;&gt;
 Woah This room is huge... &lt;br&gt;(after:2s)[(transition: &quot;dissolve&quot;)[There&#39;s a massive lit chanderlier hanging from the ceiling, and there are shelves loaded with old books]]&lt;br&gt;&lt;br&gt;(after:4s)[(transition:&quot;dissolve&quot;)[Why is it lit though? no one has been here unless... My parents must still be here!]]
  (after:5.5s)[(transition: &quot;dissolve&quot;)[I can see a door in the corner, lets [[head over there.]]]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="head over there." tags="" position="759,1057" size="100,100">(set: $headlessman to &quot;No&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="head over there." tags="" position="715,1053" size="100,100">(set: $headlessman to &quot;No&quot;)
 |statue&gt;[&lt;img id=&quot;image&quot; src=&quot;&quot;&gt;]
 &lt;div id=&quot;textdesign&quot;&gt;
 (text-style:&quot;blur&quot;)[This room is pretty dark,]&lt;br&gt;
 (after:2s)[(transition:&quot;dissolve&quot;)[(link:&quot;AHH THERE&#39;S SOMEONE HERE-&quot;)[(replace:?statue)[&lt;img id=&quot;image&quot; src=&quot;https://raw.githubusercontent.com/Medicgun/The-mansion-game/fb821b402ec22b72b3991b3635541592913c1d46/horseman.png&quot; width=&quot;500px;&quot; height=&quot;400px;&quot;&gt;](set: $headlessman to &quot;Yes&quot;)(transition:&quot;dissolve&quot;)[Wait... It&#39;s just a statue](if:$headlessman is &quot;Yes&quot;)[(after:5s)[(transition:&quot;dissolve&quot;)[&lt;br&gt;&lt;br&gt;Hold on... that&#39;s the headless horseman! My mom told me stories about him, he was very scary&lt;br&gt;&lt;br&gt;[[hmmm]]]]]]]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="hmmm" tags="" position="754,1199" size="100,100">&lt;img id=&quot;image&quot; src=&quot;https://github.com/Medicgun/The-mansion-game/blob/main/darkroom.jpg?raw=true&quot; width=&quot;300px;&quot; height=&quot;400px;&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="hmmm" tags="" position="732,1207" size="100,100">&lt;img id=&quot;image&quot; src=&quot;https://github.com/Medicgun/The-mansion-game/blob/main/darkroom.jpg?raw=true&quot; width=&quot;300px;&quot; height=&quot;400px;&quot;&gt;
 &lt;div id=&quot;textdesign&quot;&gt;
 Wait I can see something in his chest...
 (after: 2s)[(transition:&quot;dissolve&quot;)[&lt;br&gt;looks like a medallion]]
@@ -274,7 +274,7 @@ The door&#39;s locked...
 (elseif: $event is 5)[The text for event 5]
 (elseif: $event is 6)[The text for event 6]
 [[test2]] 
-[[test]] </tw-passagedata><tw-passagedata pid="24" name="investigate The fireplace" tags="" position="933,1181" size="100,100">/*picture needed
+[[test]] </tw-passagedata><tw-passagedata pid="24" name="investigate The fireplace" tags="" position="933,1181" size="100,100">&lt;img id=&quot;image&quot; src=&quot;https://github.com/Medicgun/The-mansion-game/blob/main/fireplace.png?raw=true&quot; &gt;
 
 &lt;img id=&quot;image&quot; src=&quot;&quot;&gt;
 &lt;div id=&quot;textdesign&quot;&gt;
@@ -501,7 +501,7 @@ Nope, the wall&#39;s totally solid here
 (link:&quot;Hey, there&#39;s a passage here&quot;)[(transition:&quot;dissolve&quot;)[AHHHHHHHHHHH&lt;br&gt;My Back-&lt;br&gt;[[Get up]]]]
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="Go through the passage" tags="" position="765,2674" size="100,100">&lt;img id=&quot;image&quot; src=&quot;&quot;&gt;
-&lt;div&gt;
+&lt;div id=&quot;textdesign&quot;&gt;
 It&#39;s a hallway, with family portraits on the wall?
 (after:2s)[(transition:&quot;dissolve&quot;)[Wait, my family could be here]]
 (after:4s)[(transition:&quot;dissolve&quot;)[ [[Search for them]]]]
@@ -515,8 +515,8 @@ Well, where to now?&lt;br&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="Get up" tags="" position="1290,2649" size="100,100">&lt;div id=&quot;textdesign&quot;&gt;
 That was a long fall
 (after:2s)[(transition:&quot;dissolve&quot;)[Guess I&#39;ve gotta find another way out]]
-(after:4s)[(transition:&quot;dissolve&quot;)[There&#39;s something on the floor!&lt;br&gt;[[pick it up-&gt;third battery]]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Door with X" tags="" position="737,2501" size="100,100">&lt;img&gt;
+(after:4s)[(transition:&quot;dissolve&quot;)[There&#39;s something on the floor!&lt;br&gt;[[pick it up-&gt;third battery]]]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="Door with X" tags="" position="724,2505" size="100,100">&lt;img&gt;
 &lt;div&gt;
 (text-colour:red)[The door slams shut behind you...(after:2s)[&lt;br&gt; Then the floor opens up and swallows you whole&lt;br&gt;]&lt;br&gt;
 (after:4s)[(transition:&quot;dissolve&quot;)[&lt;h2&gt;Game Over&lt;/h2&gt;]]]
@@ -525,15 +525,12 @@ That was a long fall
 I see a way out!
 [[Go there-&gt;Open the trapdoor]] 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="third battery" tags="" position="1110,2799" size="100,100">&lt;img&gt;
-(set:$Flashlight to true)
-(set:$battery1 to true)
-(set:$battery2 to true)
 &lt;div id=&quot;textdesign&quot;&gt;
-(if:$Flashlight is false)[A battery! It would be nice if I had a flashlight right about now]
-(if:$Flashlight is true)+(if:$battery1 is false)[Another battery! I just need one more now]
-(if:$Flashlight is true)+(if:$battery1 is true)+(if:$battery2 is true)[(set:$secret to true)The final battery! I can make the flashlight work now!]
-(after:3s)[(transition:&quot;dissolve&quot;)[Well there&#39;s a path up ahead, I should go there&lt;br&gt;&lt;br&gt; [[Go-&gt;Go through the passage]] ]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="Search for them" tags="" position="921,2797" size="100,100">&lt;div&gt;
+(if:$Flashlight is false)[A battery! It would be nice if I had a flashlight right about now&lt;/div&gt;]
+(if:$Flashlight is true)+(if:$battery1 is false)[Another battery! I just need one more now&lt;/div&gt;]
+(if:$Flashlight is true)+(if:$battery1 is true)+(if:$battery2 is true)[(set:$secret to true)The final battery! I can make the flashlight work now!&lt;/div&gt;]
+(after:3s)[(transition:&quot;dissolve&quot;)[Well there&#39;s a path up ahead, I should go there&lt;br&gt;&lt;br&gt; [[Go-&gt;Go through the passage]] &lt;/div&gt;]]
+</tw-passagedata><tw-passagedata pid="67" name="Search for them" tags="" position="921,2797" size="100,100">&lt;div id=&quot;textdesign&quot;&gt;
 I found our photo!
 (after:2s)[(transition:&quot;dissolve&quot;)[There&#39;s already a key here...]]
 (after:4s)[(transition:&quot;dissolve&quot;)[As if they were expecting me]]
