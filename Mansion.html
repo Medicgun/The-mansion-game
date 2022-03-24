@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Mansion.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Mansion" startnode="35" creator="Twine" creator-version="2.3.16" ifid="68A14567-B275-4DA0-9C37-21C6E4313458" zoom="0.25" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">div[id~="textdesign"] {
+<tw-storydata name="Mansion" startnode="35" creator="Twine" creator-version="2.3.16" ifid="68A14567-B275-4DA0-9C37-21C6E4313458" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">div[id~="textdesign"] {
   	padding-left:50px;
   	padding-bottom: 40px;
   	border-style: solid; 
@@ -371,7 +371,7 @@ One, Two, Three, Four, Five, Six
 (after:6s)[(transition:&quot;dissolve&quot;)[ANOTHER LOCKED DOOR?!]]&lt;br&gt;
 (after:7s)[(transition:&quot;dissolve&quot;)[ [[Yell in frustration]]]]
 
-&lt;div&gt;</tw-passagedata><tw-passagedata pid="40" name="Go back to investigate the room" tags="" position="788,1922" size="100,100">&lt;div id=&quot;textdesign&quot;&gt;
+&lt;div&gt;</tw-passagedata><tw-passagedata pid="40" name="Go back to investigate the room" tags="" position="782,1922" size="100,100">&lt;div id=&quot;textdesign&quot;&gt;
 Hmmm, I see something behind that jar!
 (after:1s)[(transition:&quot;dissolve&quot;)[Should I pick it up or go back?]]&lt;br&gt;
 (after:3s)[(transition:&quot;dissolve&quot;)[ [[Go back and climb the ladder-&gt;Climb the ladder]]&lt;br&gt;&lt;br&gt;[[Pick up the strange object]]]]</tw-passagedata><tw-passagedata pid="41" name="Yell in frustration" tags="" position="647,2050" size="100,100">&lt;img&gt;
@@ -380,15 +380,17 @@ Stupid bloody locked doors.
 (after:2s)[(transition:&quot;dissolve&quot;)[At least it&#39;s not an actual door]]
 (after:4s)[(transition:&quot;dissolve&quot;)[Another note on the wall, let&#39;s see what it says]]
 (after:6s)[(transition:&quot;dissolve&quot;)[ [[Pick it up]]]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Pick up the strange object" tags="" position="946,1822" size="100,100">&lt;div id=&quot;textdesign&quot;&gt;
-A battery!
-(after:1s)[(transition:&quot;dissolve&quot;)[
-(if:$Flashlight is false)[No flashlight though, maybe I could find one somewhere]]]
-(after:1s)[(transition:&quot;dissolve&quot;)[
-(if:$Flashlight is true)+(if:$battery1 is true)[I&#39;ve got two now! Only one more to go!]]
-(after:1s)[(transition:&quot;dissolve&quot;)[
-(if:$Flashlight is true)+(if:$battery1 is false)[I can use this for the flashlight! Oh wait it needs 3, well at least I&#39;ve got one]]]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="Investigate" tags="" position="114,757" size="100,100">(if:visits is 1)[(set: $Flashlight to true)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Pick up the strange object" tags="" position="962,1807" size="100,100">
+(if:$Flashlight is false)[&lt;div id=&quot;textdesign&quot;&gt;&lt;br&gt;A battery!(after:1s)[(transition:&quot;dissolve&quot;)[
+[No flashlight though, maybe I could find one somewhere[[Go back to the ladder-&gt;Climb the ladder]]]]]&lt;/div&gt;]
+
+(if:$Flashlight is true)+(if:$battery1 is true)[&lt;div id=&quot;textdesign&quot;&gt;&lt;br&gt;A battery!(after:1s)[(transition:&quot;dissolve&quot;)[
+[I&#39;ve got two now! Only one more to go!
+[[Go back to the ladder-&gt;Climb the ladder]]]]]&lt;/div&gt;]
+
+(if:$Flashlight is true)+(if:$battery1 is false)[&lt;div id=&quot;textdesign&quot;&gt;&lt;br&gt;A battery!(after:1s)[(transition:&quot;dissolve&quot;)[
+[I can use this for the flashlight! Oh wait it needs 3, well at least I&#39;ve got one[[Go back to the ladder-&gt;Climb the ladder]]]]]&lt;/div&gt;]
+</tw-passagedata><tw-passagedata pid="43" name="Investigate" tags="" position="114,757" size="100,100">(if:visits is 1)[(set: $Flashlight to true)]
 &lt;div id=&quot;textdesign&quot;&gt;
 It&#39;s an old Flashlight! 
 (after:1s)[(transition:&quot;dissolve&quot;)[Needs a battery though]]&lt;br&gt;
@@ -494,7 +496,7 @@ Nope, the wall&#39;s totally solid here
 (else-if: $wallcheck is true)[&lt;div id=&quot;textdesign&quot;&gt;
 Nope, the wall&#39;s totally solid here
 [[Go back-&gt;Investigate the rest of the wall]]
-&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="59" name="Right side" tags="" position="1258,2498" size="100,100">&lt;img&gt;
+&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="59" name="Right side" tags="" position="1257,2498" size="100,100">&lt;img&gt;
 &lt;div id=&quot;textdesign&quot;&gt;
 (link:&quot;Hey, there&#39;s a passage here&quot;)[(transition:&quot;dissolve&quot;)[AHHHHHHHHHHH&lt;br&gt;My Back-&lt;br&gt;[[Get up]]]]
 
